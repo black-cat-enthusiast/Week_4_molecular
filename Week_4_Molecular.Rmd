@@ -1,0 +1,469 @@
+---
+title: "Presentation Ninja"
+subtitle: "⚔<br/>with xaringan"
+author: "Yihui Xie"
+institute: "RStudio, PBC"
+date: "2016/12/12 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    self_contained: true
+    seal: false
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+<center>
+# Week 4: Molecular Endpoints in Neuroscience
+
+### September 29th 2023
+
+### Jennet Baumbach
+
+<center>
+<img src="https://miro.medium.com/v2/resize:fit:960/0*rPniVVr632mD-aqt.gif">
+
+---
+
+# Historical Perspective
+
+--
+
+.pull-left[
+
+**Gregor Mendel**: Father of genetics (1865)
+
+<img src="https://undsci.berkeley.edu/wp-content/uploads/2022/08/mendel_n_peas.jpg">]
+
+--
+
+.pull-right[
+
+**Charles Waddington**: Epigenetic landscape (1941) 
+
+<img src="https://www.cell.com/cms/attachment/593804/4592806/gr1.jpg">]
+
+--
+
+"Heritability" in this context refers to dividing cells 
+
+---
+
+# Historical Perspective
+
+--
+
+### Watson & Crick (1950's)
+
+--
+
+**Alexander Todd** (organic chemist) had determined that the backbone of the DNA molecule contained repeating phosphate and deoxyribose sugar groups. 
+
+--
+
+**Erwin Chargaff** (biochem) had found that while the amount of DNA and of its four types of bases--the purine bases adenine (A) and guanine (G), and the pyrimidine bases cytosine (C) and thymine(T)--varied widely from species to species, A and T always appeared in ratios of one-to-one, as did G and C. 
+
+--
+
+**Maurice Wilkins** and **Rosalind Franklin** had obtained high-resolution X-ray images of DNA fibers that suggested a helical, corkscrew-like shape. 
+
+--
+
+**Linus Pauling** then the world's leading physical chemist, had recently discovered the single-stranded alpha helix, the structure found in many proteins, prompting biologists to think of helical forms.
+
+---
+
+# Historical Perspective
+
+### Watson & Crick (1950's)
+
+--
+
+.pull-left[<img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2F171737a0/MediaObjects/41586_1953_BF171737a0_Figa_HTML.png">]
+
+--
+
+.pull-right[<img src="https://media.sciencephoto.com/h4/00/00/41/h4000041-800px-wm.jpg">]
+
+--
+
+.footnote[[A Structure for Deoxyribose Nucleic Acid](https://www.nature.com/articles/171737a0)]
+
+---
+
+# Gene expression and Regulation
+
+--
+
+<center>
+<img src="https://astrobiochem.files.wordpress.com/2019/02/sample-essay-on-regulation-of-gene-expression.jpg">
+</center>
+
+--
+
+**Proteins** perform most of the work of living cells.
+
+--
+
+- versatile class of mcro molecules that are involved in every cellular function. 
+
+---
+
+--
+
+<center>
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20220823180008/ProteinStructure.png">
+
+---
+
+# Antibodies
+
+--
+
+.pull-left[<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Antibody.svg/390px-Antibody.svg.png">]
+
+--
+
+.pull-right[
+
+Immune cells that bind hightly specifically to their targt antigens. 
+
+Block pathogens like viruses or bacteria from infecting healthy cells. 
+
+<img src = "https://scitechdaily.com/images/Antibodies-Attacking-Coronavirus-Virus-Cell.gif">
+
+]
+
+---
+
+# Immunohistochemistry - Brain Collection
+
+--
+
+### Transcardial perfusion
+
+--
+
+- Give anesthetic overdose via i.p. injection
+
+--
+<center>
+<img src ="https://d3i71xaburhd42.cloudfront.net/6d4e0fe28fc73bb2ce369f37e716f44c97cd7697/6-Figure5-1.png",height=200 width=500>
+</center>
+--
+
+- Removes all blood from the brain
+
+--
+
+- Changes the texture of the tissue (hardens)
+
+---
+
+# Immunohistochemistry - Brain Slicing 
+
+--
+
+.pull-left[<img src="https://tannerscientific.com/images/TN50-cryostat.png",height=450 width=300>]
+
+--
+
+.pull-right[<img src="https://lifecanvastech.com/wp-content/uploads/2022/09/Mouse-Brain-Arrat-200um-100dpi.png">
+
+- Tissue sliced into thin sections (40-50um)
+
+- Allows for quality microscopy in subsequent steps
+
+]
+
+---
+
+# Immunohistochemistry - Staining 
+
+.pull-left[<img src="https://www.sylics.com/wp-content/uploads/2021/09/Free-floating-sections.jpg">
+
+- **Soap** rinses permialize the membrane
+
+- Antibody-based detection produces staining of cells containing the target antigen]
+
+--
+
+.pull-right[<img src="https://www.epigentek.com/catalog/images/newsdesk/IHC-image.jpg">]
+
+---
+
+# Immunohistochemistry - Visualization
+
+--
+
+.pull-left[<img src="https://cloudfront.jove.com/CDNSource/teasers/62876.jpg",width=300 height = 250>
+
+- Slices are mounted and dried on glass slides. 
+
+- After the slices have dried, a thin layer of glue is used to fix a glass coverslip over the samples. 
+]
+
+--
+
+.pull-right[<img src="https://cdn1.sinobiological.com/styles/default/images/pdyimg/IHC/mouse_6/u6.png">
+
+- Image using a regular light microscope 
+
+- Count cells manually or using software
+
+]
+
+---
+
+# Immunofluorescence
+
+--
+
+```{r,echo=FALSE}
+knitr::include_graphics("VTA_IF.png")
+```
+
+---
+
+# Western Blotting - Tissue Collection
+
+--
+
+**Must** be fresh/frozen tissues (no perfusion)
+
+--
+
+<center>
+<img src="https://media.springernature.com/lw685/springer-static/image/chp%3A10.1007%2F978-1-61779-111-6_2/MediaObjects/978-1-61779-111-6_2_Fig8_HTML.jpg">
+
+--
+
+Tissues are "lysed" in a buffer that contains **soap** and **salt**
+
+---
+
+# Western Blotting - Measure Protein [ ]s
+
+--
+
+.pull-left[
+
+**Bradford Assay** Detects protein concentrations in samples
+
+<img src="https://ecampusontario.pressbooks.pub/app/uploads/sites/772/2020/11/oerterm1lab8pic6-1024x774.png">
+
+- Standard curve is a serial dilution of [BSA](https://en.wikipedia.org/wiki/Bovine_serum_albumin) in water.
+]
+
+--
+
+.pull-right[
+
+**Line of best fit** Generated for the points on the standard
+
+- determine the linear relationship between input and output
+
+<img src="https://www.researchgate.net/publication/305287157/figure/fig3/AS:503098764259328@1496959500289/Bradford-assay-standard-curve-of-concentration-versus-absorbance-The-concentration-of.png">
+
+- Concentrations of the samples are calculated based on the line of best fit. 
+]
+
+---
+
+# Western Blotting - Prep Samples
+
+--
+
+.pull-left[<img src="https://www.bio-rad.com/sites/default/files/styles/brc_featured_sku_275x275_/public/webroot/web/images/lsr/products/electrophoresis/sku_view/global/161-0747_view.webp?itok=sSeAqHi7">
+
+- Normalize protein concentrations
+
+- Add loading buffer + BME 
+
+- HEAT at 60-95 degrees C for 5-10 minutes
+]
+
+--
+
+.pull-right[
+<img src="https://labster-image-manager.s3.amazonaws.com/v2/THE/ef3abf44-0bbc-4dbd-a85b-5d7a8ec1821d/SamplePrepSDS.en.x512.png">]
+
+---
+
+# Western Blotting - Overview
+
+--
+
+<center> 
+<img src = "https://upload.wikimedia.org/wikipedia/commons/4/46/SDS-PAGE_Electrophoresis.png">
+</center>
+
+--
+
+- SDS coats proteins in a uniform negative charge
+
+--
+
+- The positive electrode pulls the proteins through the gel matrix & proteins are separated based on their weights.
+
+--
+
+- A second step of electrophoresis involves pulling the proteins forward (out of the gel and onto a sticky piece of "membrane paper")
+
+--
+
+- "Poly-acrylamide-gel-electrophoresis" - aka PAGE
+
+---
+
+# Western Blotting - "standard curve" 
+
+--
+
+### Protein Ladder
+
+--
+
+.pull-left[<img src="https://www.biotechrabbit.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/t/r/tricolorbroad.png">]
+
+--
+
+.pull-right[
+
+- Colour-labeled standard (purchase) that acts as a "scale" of protein size. 
+
+- Must load on every gel
+
+]
+
+---
+
+# Western Blotting - Acrylamide Percentage
+
+--
+
+<center>
+<img src="https://www.pnas.org/cms/10.1073/pnas.1311305110/asset/605cfcfd-bfbf-440c-8aa7-c2538998ddef/assets/graphic/pnas.1311305110fig01.jpeg",width=600 height=450>
+</center>
+
+--
+
+.footnote[[Paper that published this image](https://www.pnas.org/doi/10.1073/pnas.1311305110)]
+
+---
+
+# Western Blotting - Total Protein visualization
+
+--
+
+### [Ponceau S stain](https://www.thermofisher.com/order/catalog/product/A40000279)
+
+--
+
+.pull-left[<img src="https://i1.sndcdn.com/artworks-p4lyay2RRoGRgVyu-GGwtMA-t500x500.jpg">]
+
+--
+
+.pull-right[<img src="https://www.enzolifesciences.com/fileadmin/redacteur/bilder/landing_pages/Western-blot/2020-01-Western-blot.jpg">
+
+- Water-soluble, reversible
+
+- Excellent for presence-absence detection
+]
+
+---
+
+# Western Blotting - AB-based detection
+
+--
+
+<center>
+<img src="https://www.elabscience.com/Uploads/Editor/2017-06-08/5938eb6e9ebb2.jpg">
+
+---
+
+# Western Blotting - Detection Normalization
+
+--
+
+<center>
+<img src="https://www.licor.com/images/bio/figures/applications/normalized-vs-raw-data.png">
+
+--
+
+Experimental conditions must be equally represented across a given western blot. 
+
+---
+
+# Western Blotting - Summary
+
+--
+
+<center>
+<img src = "https://images.novusbio.com/design/wb-application-illustration.jpg">
+
+---
+
+--
+
+<center>
+<img src="https://www.researchgate.net/publication/322361719/figure/fig4/AS:614247084085253@1523459325409/Immunofluorescence-staining-and-protein-expression-levels-of-total-A-in-brain-tissues.png",height=600 width=500>
+</center>
+
+--
+
+.footnote[[Link to article](https://content.iospress.com/articles/journal-of-alzheimers-disease/jad170594)]
+
+---
+
+# Summary: Antibody-based Protien Detection
+
+.pull-left[
+<center>
+<b>IHC</b>
+</center>
+
+- High spatial resolution 
+
+- Requires proteins fixed in their quatrinary formations. 
+
+- Easier / more robust & reliable than Western blots
+
+- Provides high-resolution qualitative information about protien expression.
+
+]
+
+.pull-right[
+<center><b>Western Blots
+</b></center>
+
+- Requires *denatured* proteins (straightened out)
+
+- "semi-quantitative" 
+
+- *Requires* at least 2 stains: Target & Normalizer
+
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
